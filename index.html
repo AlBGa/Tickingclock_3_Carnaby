@@ -29,7 +29,7 @@
 		
 		var checkDayEnd = function() {
 			var date = new Date();
-			document.getElementById('daystoend').textContent =  timerend.getDate() - date.getDate(); 
+			document.getElementById('daystoend').textContent =  Math.floor((timerend - date)/ 86400000); 
 		}
 
 		var clockhands = function() {
