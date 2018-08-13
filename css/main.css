@@ -1,0 +1,136 @@
+@font-face {
+	font-family: AOLight;
+	src: url('../Fonts/AntiqueOliveStd-Light.ttf');
+}
+
+@font-face {
+	font-family: AORoman;
+	src: url('../Fonts/AntiqueOliveStd-Roman.ttf');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #000;
+	margin: auto;
+}
+
+main {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: url('../PNGs/C_Background.png') no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+#clockcontainer {
+	position: relative;
+	width: 100%;
+}
+
+#clock {
+    position: relative;
+    display: block;
+    margin: 5vh auto 5vh;
+    width: 80%;
+    height: 55%;
+    /* background: url(../PNGs/CG_Clock Face.png) no-repeat; */
+    background-size: 100%;
+}
+
+.clockimg {
+	display: block;
+	margin: auto;
+}
+
+#daycountdown {
+	font-family: AORoman;
+    text-align: center;
+    font-size: 1.9em;
+    /* position: absolute; */
+    /* top: 7%; */
+    width: 100%;
+    margin: 5vh 0px 8vh;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: bolder;
+}
+
+#daycountdown span {
+	font-size: 2.5em;
+	vertical-align: middle;
+	font-family: AORoman;
+}
+.clockhand {
+	position: absolute;
+	-webkit-transform-origin: 52% 87.7%;
+	-moz-transform-origin: 52% 87.7%;
+	-o-transform-origin: 52% 87.7%;
+	-ms-transform-origin: 52% 87.7%;
+	transform-origin: 52% 87.7%;
+}
+
+#hourhand {
+    left: 50%;
+    top: 1.2%;
+    z-index: 50;
+}
+
+#minutehand {
+    left: 50%;
+    top: 1.2%;
+}
+
+
+/* .test {
+  height: 415px;
+  width: 39px;
+}
+
+.test::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  content: '';
+  background-color: #f0f;
+  border-radius: 50%;
+  z-index: 50000000;
+  transform: translate(-50%, -50%);
+} 
+
+ #clockcontainer::after {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  width: 5px;
+  height: 5px;
+  content: '';
+  background-color: #f0f;
+  border-radius: 50%;
+  z-index: 50000000;
+  transform: translate(-50%, -50%);
+}
+*/ 
+
+#undertext {
+    font-family: AOLight;
+    text-align: center;
+    font-size: 2.8vw;
+    /* position: absolute; */
+    /* bottom: 2vh; */
+    width: 100%;
+    text-transform: uppercase;
+}
+
+#undertext p:nth-child(even) {
+	font-family: AORoman;
+	font-weight: bold;
+	font-size: 1.8em;
+	margin: 2vh auto;
+}

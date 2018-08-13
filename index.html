@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<main>
+		<div id="daycountdown">Only <span id="daystoend"></span> days</div>
+		<div id="clockcontainer">
+			<div id="clock" alt="">
+				<img class="clockimg" src="PNGs/C_Clock Face.png" alt="">
+				<img class="clockhand" id="hourhand" src="PNGs/C_Clock Hand.png" alt="">
+				<img class="clockhand" src="PNGs/C_Clock Hand.png" id="minutehand" alt="">
+				<!-- <div class="clockhand test" style=" background: url('PNGs/C_Clock Hand.png');" id="minutehand" alt=""></div> -->
+			</div>
+		</div>
+		<div id="undertext">
+			<p>Until your new</p>
+			<p>Screen - walla</p>
+			<p>Is at your service</p>
+		</div>
+	</main>
+	<script>
+		var hourhand = document.getElementById('hourhand');
+		var minutehand = document.getElementById('minutehand');
+		var timerend = new Date(2018, 8, 20);
+		
+		var checkDayEnd = function() {
+			var date = new Date();
+			document.getElementById('daystoend').textContent =  timerend.getDate() - date.getDate(); 
+		}
+
+		var clockhands = function() {
+			var date = new Date();
+			var hr = date.getHours();
+			var mn = date.getMinutes();
+			var sc = date.getSeconds();
+			var hrPosition = hr*360/12 + ((mn * 360/60)/12);
+			var minPosition = (mn * 360/60) + (sc* 360/60)/60;
+			var secPosition = sc * 360/60;
+			hourhand.style.webkitTransform = "rotate(" + hrPosition + "deg)";
+			hourhand.style.webkitTransform += "scale(0.8)";
+			hourhand.style.mozTransform = "rotate(" + hrPosition + "deg)";
+			hourhand.style.mozTransform += "scale(0.8)";
+			hourhand.style.OTrasnform = "rotate(" + hrPosition + "deg)";
+			hourhand.style.OTransform += "scale(0.8)";
+			hourhand.style.msTransform = "rotate(" + hrPosition + "deg)";
+			hourhand.style.msTransform += "scale(0.8)";
+			hourhand.style.transform = "rotate(" + hrPosition + "deg)";
+			hourhand.style.transform += "scale(0.8)";
+
+
+			minutehand.style.webkitTransform = "rotate(" + minPosition + "deg)";
+			//minutehand.style.webkitTransform += "scale(0.8)";
+			minutehand.style.mozTransform = "rotate(" + minPosition + "deg)";
+			//minutehand.style.mozTransform += "scale(0.8)";
+			minutehand.style.OTrasnform = "rotate(" + minPosition + "deg)";
+			//minutehand.style.OTransform += "scale(0.8)";
+			minutehand.style.msTransform = "rotate(" + minPosition + "deg)";			
+			//minutehand.style.msTransform += "scale(0.8)";
+			minutehand.style.transform = "rotate(" + minPosition + "deg)";
+			//minutehand.style.transform += "scale(0.8)";
+			checkDayEnd();
+		}
+		var interval = setInterval(clockhands, 1000);
+
+
+	</script>
+</body>
+</html>
