@@ -28,18 +28,19 @@ main {
 }
 
 #clockcontainer {
-	position: relative;
-	width: 100%;
+  position: relative;
+  width: 100%;
+  margin: 8vh auto;
 }
 
 #clock {
     position: relative;
     display: block;
-    margin: 5vh auto 5vh;
-    width: 80%;
-    height: 55%;
+    /* width: 80%;
+    height: 55%; */
     /* background: url(../PNGs/CG_Clock Face.png) no-repeat; */
     background-size: 100%;
+    text-align: center;
 }
 
 .clockimg {
@@ -50,7 +51,7 @@ main {
 #daycountdown {
 	font-family: AORoman;
     text-align: center;
-    font-size: 1.9em;
+    font-size: 3em;
     /* position: absolute; */
     /* top: 7%; */
     width: 100%;
@@ -67,28 +68,33 @@ main {
 }
 .clockhand {
 	position: absolute;
-	-webkit-transform-origin: 52% 87.7%;
-	-moz-transform-origin: 52% 87.7%;
-	-o-transform-origin: 52% 87.7%;
-	-ms-transform-origin: 52% 87.7%;
-	transform-origin: 52% 87.7%;
 }
 
 #hourhand {
     left: 50%;
-    top: 1.2%;
+    top: 18.2%;
     z-index: 50;
+    -webkit-transform-origin: 50% 83%;
+    -moz-transform-origin: 50% 83%;
+    -o-transform-origin: 50% 83%;
+    -ms-transform-origin: 50% 83%;
+    transform-origin: 50% 83%;
 }
 
 #minutehand {
     left: 50%;
     top: 1.2%;
+    -webkit-transform-origin: 52% 87.7%;
+    -moz-transform-origin: 52% 87.7%;
+    -o-transform-origin: 52% 87.7%;
+    -ms-transform-origin: 52% 87.7%;
+    transform-origin: 52% 87.7%;
 }
 
-
-/* .test {
-  height: 415px;
-  width: 39px;
+/* 
+.test {
+  height: 286px;
+  width: 38px;
 }
 
 .test::after {
@@ -115,13 +121,14 @@ main {
   border-radius: 50%;
   z-index: 50000000;
   transform: translate(-50%, -50%);
-}
-*/ 
+} /* End tests */
+
 
 #undertext {
     font-family: AOLight;
     text-align: center;
-    font-size: 2.8vw;
+    font-size: 3.5vw;
+    margin-top: 15vh;
     /* position: absolute; */
     /* bottom: 2vh; */
     width: 100%;
