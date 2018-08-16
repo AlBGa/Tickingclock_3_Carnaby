@@ -30,17 +30,18 @@ main {
 #clockcontainer {
   position: relative;
   width: 100%;
-  margin: 8vh auto;
+  margin: 10vh auto 0;
+  height: 50vh;
 }
 
 #clock {
-    position: relative;
-    display: block;
-    /* width: 80%;
-    height: 55%; */
-    /* background: url(../PNGs/CG_Clock Face.png) no-repeat; */
-    background-size: 100%;
-    text-align: center;
+  position: relative;
+  display: block;
+  /* width: 80%;
+  height: 55%; */
+  /* background: url(../PNGs/CG_Clock Face.png) no-repeat; */
+  background-size: 100%;
+  text-align: center;
 }
 
 .clockimg {
@@ -50,15 +51,17 @@ main {
 
 #daycountdown {
 	font-family: AORoman;
-    text-align: center;
-    font-size: 3em;
-    /* position: absolute; */
-    /* top: 7%; */
-    width: 100%;
-    margin: 5vh 0px 8vh;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-weight: bolder;
+  text-align: center;
+  font-size: 3em;
+  /* position: absolute; */
+  /* top: 7%; */
+  width: 100%;
+  margin: 0;
+  padding: 8vh 0px;
+  height: 20vh;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-weight: bolder;
 }
 
 #daycountdown span {
@@ -125,14 +128,16 @@ main {
 
 
 #undertext {
-    font-family: AOLight;
-    text-align: center;
-    font-size: 3.5vw;
-    margin-top: 15vh;
-    /* position: absolute; */
-    /* bottom: 2vh; */
-    width: 100%;
-    text-transform: uppercase;
+  font-family: AOLight;
+  text-align: center;
+  font-size: 3.5vw;
+  /* margin-top: 15vh; */
+  /* position: absolute; */
+  /* bottom: 2vh; */
+  height: 30vh;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 9px;
 }
 
 #undertext p:nth-child(even) {
